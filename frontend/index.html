@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClubHub • Manage Your Clubs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-pill"></div>
+      <span>CLUBHUB</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <button class="nav-btn" onclick="window.location.href='login.html'">Login</button>
+      <button class="nav-btn primary" onclick="window.location.href='register.html'">Register</button>
+    </div>
+  </div>
+</header>
+
+<main class="hero" id="about">
+  <section class="hero-left">
+    <h1>WHAT IS CLUBHUB?</h1>
+    <p>
+      ClubHub is your modern club management platform for campuses.
+      Create clubs, run events, manage members, and track interests — all in one space.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-main" onclick="window.location.href='register.html'">
+        Get Started – Register
+      </button>
+      <button class="btn-ghost" onclick="window.location.href='login.html'">
+        <span>▶</span> Login to Dashboard
+      </button>
+    </div>
+
+    <p class="hero-tagline">
+      Admins create clubs & events. Students show interest & register — connected to DBMS.
+    </p>
+  </section>
+
+  <aside class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <span class="badge">Live Preview</span>
+        <span style="font-size:0.8rem;color:#9ca3af;">Campus</span>
+      </div>
+      <h3>Upcoming Highlights</h3>
+      <p>One dashboard for all clubs and events.</p>
+
+      <div class="mini-stats">
+        <div class="mini-stat"><span>Active Clubs</span><strong>14</strong></div>
+        <div class="mini-stat"><span>Events</span><strong>26</strong></div>
+        <div class="mini-stat"><span>Students</span><strong>480+</strong></div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<section id="features" class="hero" style="margin-top:0;">
+  <div class="hero-left">
+    <h2 style="font-size:1.6rem;letter-spacing:0.12em;">FEATURES</h2>
+    <p>
+      • Admins: create clubs, schedule events, manage members.<br/>
+      • Students: show interest, register for events, view memberships.<br/>
+      • Fully connectable to your PostgreSQL DBMS.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

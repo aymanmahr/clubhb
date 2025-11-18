@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClubHub • Student Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-pill"></div>
+      <span>CLUBHUB</span>
+    </div>
+    <div class="nav-links">
+      <span style="font-size:0.85rem;color:#9ca3af;">Student Panel</span>
+      <button class="nav-btn" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+  </div>
+</header>
+
+<div class="dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-brand">ClubHub</div>
+      <p class="sidebar-group-label">Student</p>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Profile</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn active" data-panel="stu-profile">
+          <span class="icon">👤</span> Profile
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Clubs</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn" data-panel="stu-interest">
+          <span class="icon">⭐</span> Show Interest
+        </button>
+        <button class="sidebar-btn" data-panel="stu-joined">
+          <span class="icon">📘</span> Joined Clubs
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Events</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn" data-panel="stu-events">
+          <span class="icon">📅</span> View Events
+        </button>
+        <button class="sidebar-btn" data-panel="stu-register-event">
+          <span class="icon">📝</span> Register for Event
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Payments</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn" data-panel="stu-payments">
+          <span class="icon">💳</span> Make Payment
+        </button>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="window.location.href='login.html'">
+        ⎋ Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-main">
+
+    <div class="dashboard-header">
+      <div>
+        <div class="dash-title">Student Profile</div>
+        <div class="dash-sub">Use the sidebar to explore clubs, show interest, register for events, and more.</div>
+      </div>
+
+      <div class="theme-toggle">
+        Theme
+        <div class="theme-switch">
+          <div class="theme-thumb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE PANEL -->
+    <section class="panel" id="stu-profile">
+      <h3>Your Profile</h3>
+      <p class="panel-desc">Update your personal and contact details.</p>
+
+      <div class="panel-grid">
+        <div>
+          <div class="form-group">
+            <label class="label">Name</label>
+            <input class="input" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label class="label">Email</label>
+            <input class="input" type="email" />
+          </div>
+
+          <div class="form-group">
+            <label class="label">Phone number</label>
+            <input class="input" type="tel" />
+          </div>
+
+          <button class="btn-panel">Save profile</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOW INTEREST PANEL -->
+    <section class="panel" id="stu-interest" style="display:none;">
+      <h3>Show Interest for Club</h3>
+      <p class="panel-desc">This inserts into an interest or registrations table.</p>
+
+      <div class="panel-grid">
+        <div>
+          <div class="form-group">
+            <label class="label">Club code</label>
+            <input class="input" type="text" />
+          </div>
+          <button class="btn-panel">Submit Interest</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOINED CLUBS PANEL -->
+    <section class="panel" id="stu-joined" style="display:none;">
+      <h3>Your Clubs</h3>
+      <p class="panel-desc">Displays clubs you joined (from memberships table).</p>
+
+      <p style="color:#9ca3af;font-size:0.85rem;">
+        TODO: Connect to memberships table and show joined clubs.
+      </p>
+    </section>
+
+    <!-- VIEW EVENTS -->
+    <section class="panel" id="stu-events" style="display:none;">
+      <h3>Upcoming Events</h3>
+      <p class="panel-desc">Shows events from the events table.</p>
+
+      <p style="font-size:0.85rem;color:#9ca3af;">
+        TODO: Populate from backend GET /events.
+      </p>
+    </section>
+
+    <!-- REGISTER FOR EVENT -->
+    <section class="panel" id="stu-register-event" style="display:none;">
+      <h3>Register for an Event</h3>
+      <p class="panel-desc">Insert into registrations table.</p>
+
+      <div class="panel-grid">
+        <div>
+          <div class="form-group">
+            <label class="label">Event ID</label>
+            <input class="input" type="number" />
+          </div>
+
+          <button class="btn-panel">Register</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENTS PANEL -->
+    <section class="panel" id="stu-payments" style="display:none;">
+      <h3>Make Payment</h3>
+      <p class="panel-desc">Insert into payments table.</p>
+
+      <div class="panel-grid">
+        <div>
+          <div class="form-group">
+            <label class="label">Amount</label>
+            <input class="input" type="number" />
+          </div>
+
+          <button class="btn-panel">Pay</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  // Sidebar panel switching for STUDENT dashboard
+  const panelButtons = document.querySelectorAll(".sidebar-btn");
+  const panels = document.querySelectorAll(".panel");
+
+  panelButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-panel");
+
+      // active highlight
+      panelButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // show correct panel
+      panels.forEach(p => {
+        p.style.display = (p.id === target) ? "block" : "none";
+      });
+
+      // change page title
+      const headerTitle = document.querySelector(".dash-title");
+      if (headerTitle) headerTitle.textContent = btn.textContent.trim();
+    });
+  });
+
+
+  // Theme toggle
+  const themeSwitch = document.querySelector(".theme-switch");
+  if (themeSwitch) {
+    themeSwitch.addEventListener("click", () => {
+      themeSwitch.classList.toggle("on");
+      document.body.classList.toggle("light");
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* ===========================
+   GLOBAL THEME
+   =========================== */
+
+:root {
+  --bg: #0b0f19;
+  --bg-light: #151b28;
+  --bg-alt: #101520;
+  --text: #dce3f0;
+  --text-light: #9ca3af;
+  --accent: #3b82f6;          /* blue glow */
+  --accent-light: #60a5fa;
+  --card: #111827;
+  --input-bg: #1a2234;
+  --border: #2a3142;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+body {
+  background: radial-gradient(circle at top, #1e293b, #0b0f19);
+  margin: 0;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+/* ===========================
+   NAVBAR
+ =========================== */
+
+.navbar {
+  background: rgba(20, 25, 40, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 18px 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.brand-pill {
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 30px;
+  margin-right: 10px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.nav-links a,
+.nav-btn {
+  margin-left: 18px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.nav-btn {
+  padding: 8px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ===========================
+   HERO / LANDING PAGE
+ =========================== */
+
+.hero {
+  padding: 60px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 15px;
+}
+
+.hero-left p {
+  color: var(--text-light);
+  max-width: 480px;
+}
+
+.btn-main {
+  margin-right: 15px;
+  padding: 10px 22px;
+  background: var(--accent);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.btn-main:hover {
+  background: var(--accent-light);
+}
+
+.btn-ghost {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent-light);
+  cursor: pointer;
+}
+
+.hero-right {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+  width: 380px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* ===========================
+   AUTH PAGES (login/register)
+ =========================== */
+
+.center-shell {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 430px;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(60, 120, 255, 0.25);
+}
+
+.auth-title {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.auth-sub {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.form-group {
+  margin-top: 18px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  padding: 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-radius: 6px;
+}
+
+.input:focus {
+  outline: 1px solid var(--accent);
+}
+
+.input-textarea {
+  min-height: 80px;
+}
+
+.toggle-row {
+  display: flex;
+  gap: 12px;
+}
+
+.toggle-pill {
+  flex: 1;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent-light);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toggle-pill.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* ===========================
+   DASHBOARD LAYOUT
+ =========================== */
+
+.dashboard-shell {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: rgba(20, 25, 40, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sidebar-group-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.sidebar-btn {
+  background: transparent;
+  text-align: left;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--danger);
+  background: transparent;
+  color: var(--danger);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 35px;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-title {
+  font-size: 1.5rem;
+}
+
+.dash-sub {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.theme-toggle {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.theme-switch {
+  width: 36px;
+  height: 18px;
+  background: var(--border);
+  border-radius: 20px;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.theme-switch.on {
+  background: var(--accent);
+}
+
+.theme-thumb {
+  height: 14px;
+  width: 14px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.theme-switch.on .theme-thumb {
+  transform: translateX(18px);
+}
+
+/* ===========================
+   PANELS
+ =========================== */
+
+.panel {
+  margin-top: 30px;
+  padding: 25px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(60,120,255,0.25);
+}
+
+.panel h3 {
+  margin-top: 0;
+}
+
+.panel-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.panel-grid {
+  margin-top: 15px;
+}
+
+.btn-panel {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--accent);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-panel:hover {
+  background: var(--accent-light);
+}

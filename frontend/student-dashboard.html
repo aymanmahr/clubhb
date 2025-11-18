@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClubHub • Student Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <div class="brand"><div class="brand-pill"></div><span>CLUBHUB</span></div>
+    <div class="nav-links">
+      <span style="font-size:0.85rem;color:#9ca3af;">Student Panel</span>
+      <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+    </div>
+  </div>
+</header>
+
+<div class="dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-brand">ClubHub</div>
+      <p class="sidebar-group-label">Student</p>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Profile</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn active" data-panel="stu-profile">👤 Profile</button>
+      </div>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Clubs</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn" data-panel="stu-interest">⭐ Show Interest</button>
+        <button class="sidebar-btn" data-panel="stu-joined">📘 Joined Clubs</button>
+      </div>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Events</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn" data-panel="stu-events">📅 View Events</button>
+        <button class="sidebar-btn" data-panel="stu-register-event">📝 Register Event</button>
+      </div>
+    </div>
+
+    <div>
+      <p class="sidebar-group-label">Payments</p>
+      <div class="sidebar-nav">
+        <button class="sidebar-btn" data-panel="stu-payments">💳 Payments</button>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="window.location.href='login.html'">⎋ Logout</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+
+    <div class="dashboard-header">
+      <div>
+        <div class="dash-title">Profile</div>
+        <div class="dash-sub">Manage your profile and activities</div>
+      </div>
+      <div class="theme-toggle">Theme<div class="theme-switch"><div class="theme-thumb"></div></div></div>
+    </div>
+
+    <!-- PROFILE -->
+    <section class="panel" id="stu-profile">
+      <h3>Your Profile</h3>
+      <p class="panel-desc">Update your details</p>
+
+      <div class="panel-grid">
+        <div>
+          <div class="form-group"><label class="label">Name</label><input class="input" type="text"></div>
+          <div class="form-group"><label class="label">Email</label><input class="input" type="email"></div>
+          <div class="form-group"><label class="label">Phone</label><input class="input" type="tel"></div>
+          <button class="btn-panel" id="btn-save-profile">Save</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEREST -->
+    <section class="panel" id="stu-interest" style="display:none;">
+      <h3>Show Interest</h3>
+      <div class="panel-grid">
+        <div>
+          <div class="form-group"><label class="label">Club code</label><input class="input" type="text"></div>
+          <button class="btn-panel" id="btn-interest">Submit Interest</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT REGISTER -->
+    <section class="panel" id="stu-register-event" style="display:none;">
+      <h3>Register for Event</h3>
+      <div class="panel-grid">
+        <div>
+          <div class="form-group"><label class="label">Event ID</label><input class="input" type="number"></div>
+          <button class="btn-panel" id="btn-register-event">Register</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENTS -->
+    <section class="panel" id="stu-payments" style="display:none;">
+      <h3>Make Payment</h3>
+      <div class="panel-grid">
+        <div>
+          <div class="form-group"><label class="label">Amount</label><input class="input" type="number"></div>
+          <button class="btn-panel" id="btn-stu-payment">Pay</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
